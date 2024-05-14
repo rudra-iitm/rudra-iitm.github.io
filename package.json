@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rudra-iitm.github.io",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.1.4",
