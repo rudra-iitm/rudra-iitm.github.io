@@ -26,7 +26,7 @@ const Homepage = () => {
                 <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink href="/resume">Resume</NavigationMenuLink>
+                <NavigationMenuLink href="/#/resume">Resume</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
