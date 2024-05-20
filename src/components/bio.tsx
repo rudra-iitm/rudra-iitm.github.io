@@ -2,9 +2,9 @@ import { Dock, DockIcon } from '@/components/ui/dock';
 import { LampContainer } from '@/components/ui/lamp';
 import { motion } from "framer-motion";
 
-const Bio = () => {
+const Bio = ({ className = '' }: { className?: string }) => {
   return (
-    <LampContainer>
+    <LampContainer className={`${className}`}>
       <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,6 +18,28 @@ const Bio = () => {
         Rudra Pratap Singh <br /> 
         <span className='text-md md:text-3xl'>Full Stack Developer</span>
       </motion.h1>
+      <nav className="nav hidden lg:block" aria-label="In-page jump links">
+        <ul className="my-8 w-max">
+          <li>
+            <a className="group flex items-center py-3 active" href="#about">
+            <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+            <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
+            </a>
+          </li>
+          <li>
+            <a className="group flex items-center py-3" href="#experience">
+              <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+              <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
+            </a>
+          </li>
+          <li>
+            <a className="group flex items-center py-3" href="#projects">
+              <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+              <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <Dock className='border-0'>
       <DockIcon>
         <Icons.gitHub className="h-6 w-6" />
