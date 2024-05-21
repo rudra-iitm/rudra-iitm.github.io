@@ -1,5 +1,6 @@
 
 
+import Footer from '@/components/footer';
 import { TechArchive } from '@/components/tech-archive';
 import Spotlight, { SpotlightCard } from '@/components/ui/spotlight';
 import { ArrowLeftIcon } from 'lucide-react';
@@ -19,6 +20,9 @@ const TechStack = () => {
             My Tech Stacks
         </div>
         <TechArchive />
+        <div className='pl-8 pr-8 md:pr-16 mt-32'>
+          <Footer />
+        </div>
       </SpotlightCard>
     </Spotlight>
   );

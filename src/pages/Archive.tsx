@@ -1,4 +1,5 @@
 
+import Footer from '@/components/footer';
 import { ProjectTable } from '@/components/project-archive';
 import Spotlight, { SpotlightCard } from '@/components/ui/spotlight';
 import { ArrowLeftIcon } from 'lucide-react';
@@ -18,6 +19,9 @@ const Archive = () => {
             All Projects
         </div>
         <ProjectTable />
+        <div className='pl-8 pr-8 md:pr-16 mt-32'>
+          <Footer />
+        </div>
       </SpotlightCard>
     </Spotlight>
   );
