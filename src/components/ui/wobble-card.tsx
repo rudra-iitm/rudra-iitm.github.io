@@ -6,10 +6,12 @@ export const WobbleCard = ({
   children,
   containerClassName,
   className,
+  onClick,
 }: {
   children: React.ReactNode;
   containerClassName?: string;
   className?: string;
+  onClick?: () => void;
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -41,6 +43,7 @@ export const WobbleCard = ({
       )}
     >
       <div
+        onClick={onClick}
         className="relative  h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]  sm:mx-0 sm:rounded-2xl overflow-hidden"
         style={{
           boxShadow:
