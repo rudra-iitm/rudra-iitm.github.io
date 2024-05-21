@@ -1,9 +1,10 @@
 
-import { ProjectTable } from '@/components/project-archive';
+
+import { TechArchive } from '@/components/tech-archive';
 import Spotlight, { SpotlightCard } from '@/components/ui/spotlight';
 import { ArrowLeftIcon } from 'lucide-react';
 
-const Archive = () => {
+const TechStack = () => {
 
   return (
     <Spotlight>
@@ -15,12 +16,12 @@ const Archive = () => {
             </a>    
         </div>
         <div className='text-gray-300 text-5xl font-bold mb-8' style={{ fontFamily: 'Arial, sans-serif'}}>
-            All Projects
+            My Tech Stacks
         </div>
-        <ProjectTable />
+        <TechArchive />
       </SpotlightCard>
     </Spotlight>
   );
 };
 
-export default Archive
+export default TechStack

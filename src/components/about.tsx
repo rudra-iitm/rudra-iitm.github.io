@@ -10,10 +10,10 @@ const About = ({ className = '' }: { className?: string }) => {
         <div className='text-md mt-4 md:text-2xl text-gray-300'>Tech Stacks</div>
         <TechStacks />
         <div className="mt-4 hover:decoration-solid hover:underline">
-            <a href={'#'} className="text-cyan-500 flex items-center">
+            <a href={'/#/techs'} className="text-cyan-500 flex items-center">
             View Full Tech Stacks
             <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </a>    
+            </a>
         </div>
     </div>
   )
