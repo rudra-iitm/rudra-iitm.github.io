@@ -124,7 +124,7 @@ export function Projects() {
                 ))}
             </BentoGrid>
         <div className="mt-4 hover:decoration-solid hover:underline">
-            <a href={'#'} className="text-cyan-500 flex items-center">
+            <a href={'/#/archive'} className="text-cyan-500 flex items-center">
             View Full Project Archive
             <ArrowRightIcon className="ml-2 h-4 w-4" />
             </a>    
