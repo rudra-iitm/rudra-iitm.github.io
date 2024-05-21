@@ -55,19 +55,30 @@ const Bio = ({ className = '' }: { className?: string }) => {
         </ul>
       </nav>
       <Dock className='border-0'>
-      <DockIcon>
+      <DockIcon onClick={() => {
+        window.open('https://github.com/Rudra-IITM','_blank');
+      }}>
         <Icons.gitHub className="h-6 w-6" />
       </DockIcon>
-      <DockIcon>
+      <DockIcon onClick={() => {
+        window.open('https://www.linkedin.com/in/rudra-iitm/','_blank');
+      }}>
         <Icons.linkedIn className="h-6 w-6" />
       </DockIcon>
-      <DockIcon>
+      <DockIcon onClick={() => {
+        window.open('mailto:rudransh.iitm@gmail.com','_blank');
+      }}>
         <Icons.gmail className="h-6 w-6" />
       </DockIcon>
-      <DockIcon>
+      <DockIcon onClick={() => {
+        window.open('https://www.notion.so/','_blank');
+      }
+      }>
         <Icons.notion className="h-6 w-6" />
       </DockIcon>
-      <DockIcon>
+      <DockIcon onClick={() => {
+        window.open('https://chat.openai.com/','_blank');
+      }}>
         <Icons.openai className="h-6 w-6" />
       </DockIcon>
     </Dock>
