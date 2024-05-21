@@ -89,7 +89,7 @@ import {
         <TableHeader>
           <TableRow className="hover:bg-slate-950">
             <TableHead className="text-white ">Tech Stack</TableHead>
-            <TableHead className="text-white max-w-md">Overview</TableHead>
+            <TableHead className="text-white hidden md:block max-w-md">Overview</TableHead>
             <TableHead className="text-white">Proficiency</TableHead>
           </TableRow>
         </TableHeader>
@@ -97,9 +97,9 @@ import {
           {techs.map((tech, index) => (
             <TableRow key={index} className="hover:bg-slate-900">
               <TableCell className="text-gray-200 text-sm">{tech.name}</TableCell>
-              <TableCell className="text-gray-400 max-w-xl">{tech.overview}</TableCell>
-              <TableCell className="text-gray-400 max-w-xl">
-                <div className={`${tech.proficiencies == "Proficient" ? "bg-green-600": tech.proficiencies == "Intermediate" ? "bg-blue-600" : "bg-orange-500"} flex justify-center items-center py-2 text-white rounded-full`}>
+              <TableCell className="text-gray-400 hidden md:block max-w-xl">{tech.overview}</TableCell>
+              <TableCell className="text-gray-400 min-w-36">
+                <div className={`${tech.proficiencies == "Proficient" ? "bg-[#0b933d]": tech.proficiencies == "Intermediate" ? "bg-cyan-500" : "bg-orange-500"} flex justify-center items-center py-2 text-white rounded-full`}>
                     {tech.proficiencies}
                 </div>
                 </TableCell>
