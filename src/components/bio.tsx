@@ -21,12 +21,12 @@ const Bio = ({ className = '' }: { className?: string }) => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-0 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-xl font-medium tracking-tight text-transparent md:text-5xl"
+        className="mt-0 bg-gradient-to-br from-slate-300 to-white md:to-slate-500 py-4 bg-clip-text text-center text-xl font-medium tracking-tight text-transparent md:text-5xl"
       >
         Rudra Pratap Singh <br /> 
-        <span className='text-md md:text-3xl'>Full Stack Developer</span>
+        <span className='text-base md:text-3xl'>Full Stack Developer</span>
       </motion.h1>
-      <nav className="nav hidden lg:block" aria-label="In-page jump links">
+      <nav className="nav lg:block" aria-label="In-page jump links">
         <ul className="my-8 w-max">
           <li>
             <div onClick={() => {
