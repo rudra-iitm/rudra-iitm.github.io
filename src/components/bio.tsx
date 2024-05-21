@@ -3,6 +3,14 @@ import { LampContainer } from '@/components/ui/lamp';
 import { motion } from "framer-motion";
 
 const Bio = ({ className = '' }: { className?: string }) => {
+
+  const handleProjectClick = (value: string) => {
+    const projectsElement = document.getElementById(value);
+    if (projectsElement) {
+      projectsElement.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to element
+    }
+  };
+
   return (
     <LampContainer className={`${className}`}>
       <motion.h1
@@ -21,22 +29,28 @@ const Bio = ({ className = '' }: { className?: string }) => {
       <nav className="nav hidden lg:block" aria-label="In-page jump links">
         <ul className="my-8 w-max">
           <li>
-            <a className="group flex items-center py-3 active" href="#about">
+            <div onClick={() => {
+                handleProjectClick("about");
+              }} className="group flex items-center py-3 active hover:cursor-pointer">
             <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
             <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
-            </a>
+            </div>
           </li>
           <li>
-            <a className="group flex items-center py-3" href="#experience">
+            <div onClick={() => {
+                handleProjectClick("experience");
+              }} className="group flex items-center py-3 hover:cursor-pointer">
               <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
               <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span>
-            </a>
+            </div>
           </li>
           <li>
-            <a className="group flex items-center py-3" href="#projects">
+            <div onClick={() => {
+                handleProjectClick("projects");
+              }} className="group flex items-center py-3 hover:cursor-pointer">
               <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
               <span className="nav-text text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
-            </a>
+            </div>
           </li>
         </ul>
       </nav>
