@@ -20,7 +20,7 @@ export default function Marquee({
   children,
   vertical = false,
   repeat = 4,
-  duration = "40s",
+  duration = "60s",
   ...props
 }: MarqueeProps) {
   return (

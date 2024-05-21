@@ -1,6 +1,7 @@
 import About from '@/components/about';
 import Bio from '@/components/bio';
 import Experience from '@/components/experience';
+import Footer from '@/components/footer';
 import Projects from '@/components/projects';
 import Spotlight, { SpotlightCard } from '@/components/ui/spotlight';
 
@@ -19,6 +20,9 @@ const Homepage = () => {
             </div>
             <div className='pl-8 pr-16 mb-8'>
               <Projects />
+            </div>
+            <div className='pl-8 pr-16 mb-8'>
+              <Footer />
             </div>
           </div>
         </div>

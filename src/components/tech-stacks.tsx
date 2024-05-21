@@ -52,6 +52,21 @@ const techs = [
     body: "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale and making code easier to maintain and debug.",
     img: "/tech-stacks/typescript.png",
   },
+  {
+    name: "Tailwind CSS",
+    body: "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs directly in your markup.",
+    img: "/tech-stacks/tailwind.png",
+  },
+  {
+    name: "ShadCN",
+    body: "ShadCN is a versatile design system for React, providing a set of components and utilities to create beautiful and accessible user interfaces.",
+    img: "/tech-stacks/shadCN.png",
+  },
+  {
+    name: "Turborepo",
+    body: "Turborepo is a high-performance build system for JavaScript and TypeScript codebases, providing fast and reliable monorepo management and build orchestration.",
+    img: "/tech-stacks/turborepo.png",
+  },
 ];
 
 
