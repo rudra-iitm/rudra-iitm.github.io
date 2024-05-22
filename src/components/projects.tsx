@@ -10,7 +10,7 @@ const features = [
         name: "Knight's Gambit",
         description: "Chess game built with React, TailwindCSS, Websocket, Clerk.",
         href: "/",
-        cta: "Learn more",
+        cta: "Demo Video",
         className: "col-span-3 lg:col-span-3",
         background: (
           <img src="/knights-gambit/arena.png" width={500}
@@ -21,13 +21,12 @@ const features = [
       Icon: PiNotepadFill,
       name: "Note Corner",
       description: "A productivity hub built with NextJS, TailwindCSS.",
-      href: "/",
-      cta: "Learn more",
+      href: "https://drive.google.com/file/d/1noahnyg9g6vFVmgE9Przvo35iczilA1F/view?usp=sharing",
+      cta: "Demo Video",
       className: "col-span-3 lg:col-span-3",
       background: (
         <img src="/NoteCorner/home.png" width={500}
         height={500} className="absolute -right-4 lg:-right-[40%] filter -bottom-10 object-contain rounded-2xl h-[600px] w-[600px] transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)] group-hover:scale-105 sm:left-40" />
-        // <div className="top-0 h-[600px] w-[600px] transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)] group-hover:scale-105 sm:left-40 bg-blue-300" ></div>
       ),
     },
     {
@@ -35,7 +34,7 @@ const features = [
         name: "Mess Buddy",
         description: "A mess management system for IIT mandi built with NextJS, TailwindCSS.",
         href: "/",
-        cta: "Learn more",
+        cta: "Demo Video",
         className: "col-span-3 lg:col-span-3",
         background: (
           <img src="/MessApp/students.png" width={500}
