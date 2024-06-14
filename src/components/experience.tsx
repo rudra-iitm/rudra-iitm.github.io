@@ -64,7 +64,7 @@ const Experience = () => {
         </div>
       </WobbleCard>
       <div className="mt-4 hover:decoration-solid hover:underline">
-            <a href={'#'} className="text-cyan-500 flex items-center">
+            <a href={'https://drive.google.com/file/d/1YZaxq899E9CKva3Ch-5IV7fVhLem3ki0/view?usp=sharing'} className="text-cyan-500 flex items-center">
             View Resume
             <ArrowRightIcon className="ml-2 h-4 w-4" />
             </a>    
