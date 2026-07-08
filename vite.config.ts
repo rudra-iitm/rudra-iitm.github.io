@@ -17,7 +17,7 @@ export default defineConfig({
         routes: ["/"],
         crawlLinks: true,
       },
-    }),
+    } as any),
     viteReact(),
     tailwindcss(),
   ],
