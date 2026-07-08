@@ -1,7 +1,7 @@
 {
   "name": "portfolio-v3",
   "private": true,
-  "sideEffects": false,
+  "sideEffects": ["src/lib/gsap.ts", "*.css"],
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -55,6 +55,7 @@
     "globals": "^15.15.0",
     "nitro": "3.0.260603-beta",
     "prettier": "^3.7.3",
+    "puppeteer": "^25.3.0",
     "strip-comments": "^2.0.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
