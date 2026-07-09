@@ -75,7 +75,7 @@ export function Hero() {
               engineering craft, product thinking, and the quiet details of software that ages well.
             </p>
 
-            <Reveal delay={0.7}>
+            <Reveal delay={0.2}>
               <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6">
                 <Magnetic>
                   <Link

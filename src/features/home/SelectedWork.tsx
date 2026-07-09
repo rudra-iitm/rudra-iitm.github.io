@@ -51,6 +51,13 @@ export function SelectedWork() {
                   to="/work"
                   onMouseEnter={() => setActiveSlug(p.slug)}
                   onFocus={() => setActiveSlug(p.slug)}
+                  onClick={(e) => {
+                    // On touch devices without hover, require two taps to navigate
+                    if (activeSlug !== p.slug) {
+                      e.preventDefault();
+                      setActiveSlug(p.slug);
+                    }
+                  }}
                   className={`project-row group block px-0 py-8 outline-none transition-opacity duration-300 md:px-6 ${activeSlug === null || activeSlug === p.slug ? "opacity-100" : "opacity-40"}`}
                   data-cursor="hover"
                 >
@@ -70,13 +77,13 @@ export function SelectedWork() {
                   </div>
 
                   <AnimatePresence>
-                    {activeSlug === p.slug && (
+                    {(activeSlug === p.slug || (activeSlug === null && p.index === "01")) && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="overflow-hidden"
+                        className="overflow-hidden block lg:hidden"
                       >
                         <div className="pt-8 md:pl-[4.5rem]">
                           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -122,6 +129,34 @@ export function SelectedWork() {
                                     .slice(0, 3)}
                                 </p>
                               )}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <AnimatePresence>
+                    {activeSlug === p.slug && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                        className="overflow-hidden hidden lg:block"
+                      >
+                        <div className="pt-8 md:pl-[4.5rem]">
+                          <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+                            {p.body[0]}
+                          </p>
+                          <div className="mt-8 flex flex-wrap gap-8 md:gap-16 border-t border-hair pt-6">
+                            <div>
+                              <p className="font-mono-tag text-muted-foreground">Proof</p>
+                              <p className="mt-2 text-lg">{p.year}</p>
+                            </div>
+                            <div>
+                              <p className="font-mono-tag text-muted-foreground">Stack</p>
+                              <p className="mt-2 text-lg">{p.stack.slice(0, 3).join(" · ")}</p>
                             </div>
                           </div>
                         </div>
