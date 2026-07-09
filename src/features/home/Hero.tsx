@@ -84,7 +84,7 @@ export function Hero() {
         </Magnetic>
       </motion.div>
 
-      <div className="relative z-30 mx-auto flex w-full max-w-[1440px] flex-col-reverse items-center justify-between px-6 md:flex-row md:items-start md:px-10">
+      <div className="relative z-30 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-6 pb-20 md:flex-row md:items-start md:px-10 md:pb-0">
         <motion.div
           style={reduced ? undefined : { y, opacity }}
           className="w-full pointer-events-none mt-10 md:mt-0"
@@ -98,7 +98,7 @@ export function Hero() {
 
           <h1
             ref={titleRef}
-            className="font-display text-balance-tight mt-10 text-[clamp(3.75rem,11vw,12rem)] tracking-tight pointer-events-auto"
+            className="font-display text-balance-tight mt-10 text-[clamp(3rem,11vw,12rem)] tracking-tight pointer-events-auto"
           >
             Software engineer
             <br />

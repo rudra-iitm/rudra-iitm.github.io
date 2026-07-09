@@ -134,7 +134,7 @@ function RootComponent() {
       <SmoothScroll>
         <CustomCursor />
         <Nav />
-        <main id="main" className="min-h-screen">
+        <main id="main" className="min-h-screen relative z-10">
           <Outlet />
         </main>
         <Footer />

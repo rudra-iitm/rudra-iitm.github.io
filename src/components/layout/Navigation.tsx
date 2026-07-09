@@ -148,7 +148,7 @@ export function Nav() {
       </div>
 
       <div
-        className={`fixed inset-0 z-50 flex flex-col justify-center bg-background/95 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+        className={`fixed inset-0 z-50 flex flex-col justify-center bg-background backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
           mobileMenuOpen
             ? "opacity-100 visible pointer-events-auto"
             : "opacity-0 invisible pointer-events-none"

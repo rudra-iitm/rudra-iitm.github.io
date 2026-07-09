@@ -173,7 +173,7 @@ export function Footer() {
   }, [reduced]);
 
   return (
-    <footer ref={footerRef} className="relative overflow-hidden border-t border-hair bg-paper-warm">
+    <footer ref={footerRef} className="relative z-10 overflow-hidden border-t border-hair bg-paper-warm">
       <div aria-hidden className="closing-veil absolute inset-0 opacity-70" />
       <div className="relative mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-24">
         <div className="grid gap-12 md:grid-cols-12 md:items-start">

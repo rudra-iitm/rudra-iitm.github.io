@@ -20,7 +20,7 @@ export function ClosingCta() {
             <p className="font-mono-tag text-muted-foreground">§ 04 — Say hello</p>
             <h2
               ref={headingRef}
-              className="font-display text-balance-tight mt-6 text-[clamp(3rem,9vw,9rem)]"
+              className="font-display text-balance-tight mt-6 text-[clamp(2.5rem,10vw,9rem)]"
             >
               <span className="split-target block">Bring me the</span>
               <span className="split-target italic text-ember block">problem</span>

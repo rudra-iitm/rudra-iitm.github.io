@@ -92,6 +92,15 @@ export function SelectedWork() {
                               <p className="mt-2 text-lg">{p.stack.slice(0, 3).join(" · ")}</p>
                             </div>
                           </div>
+                          {p.image && (
+                            <div className="mt-10 block lg:hidden">
+                              <img
+                                src={p.image}
+                                alt={`${p.title} preview`}
+                                className="w-full h-auto aspect-video object-cover rounded-lg border border-hair shadow-xl bg-paper"
+                              />
+                            </div>
+                          )}
                         </div>
                       </motion.div>
                     )}

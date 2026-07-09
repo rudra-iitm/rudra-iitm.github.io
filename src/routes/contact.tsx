@@ -41,7 +41,7 @@ function ContactPage() {
       <div className="relative z-10 mx-auto max-w-[1440px]">
         <div className="flex flex-col items-center text-center">
           <p className="font-mono-tag text-muted-foreground">Index · Contact</p>
-          <h1 className="font-display text-balance-tight mt-6 text-[clamp(3rem,9vw,9rem)]">
+          <h1 className="font-display text-balance-tight mt-6 text-[clamp(2.5rem,10vw,9rem)]">
             Let's build
             <br />
             <span className="italic text-ember">something lasting.</span>
