@@ -77,73 +77,13 @@ export function SelectedWork() {
                   </div>
 
                   <AnimatePresence>
-                    {(activeSlug === p.slug || (activeSlug === null && p.index === "01")) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="overflow-hidden block lg:hidden"
-                      >
-                        <div className="pt-8 md:pl-[4.5rem]">
-                          <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-                            {p.body[0]}
-                          </p>
-                          <div className="mt-8 flex flex-wrap gap-8 md:gap-16 border-t border-hair pt-6">
-                            <div>
-                              <p className="font-mono-tag text-muted-foreground">Proof</p>
-                              <p className="mt-2 text-lg">{p.year}</p>
-                            </div>
-                            <div>
-                              <p className="font-mono-tag text-muted-foreground">Stack</p>
-                              <p className="mt-2 text-lg">{p.stack.slice(0, 3).join(" · ")}</p>
-                            </div>
-                          </div>
-                          <div className="mt-10 block lg:hidden w-full overflow-hidden rounded-lg border border-hair shadow-xl bg-paper">
-                            <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
-                              {p.href ? (
-                                <div className="pointer-events-none relative h-full w-full">
-                                  <div
-                                    className="absolute left-1/2 top-1/2 w-[1000px] h-[562px]"
-                                    style={{ transform: "translate(-50%, -50%) scale(0.35)" }}
-                                  >
-                                    <iframe
-                                      src={p.href}
-                                      className="w-full h-full border-none pointer-events-none bg-background"
-                                      title={`${p.title} preview`}
-                                    />
-                                  </div>
-                                </div>
-                              ) : p.image ? (
-                                <img
-                                  src={p.image}
-                                  alt={`${p.title} preview`}
-                                  className="absolute inset-0 h-full w-full object-cover"
-                                />
-                              ) : (
-                                <p className="font-display text-4xl text-foreground/90">
-                                  {p.title
-                                    .split(/[\s-]+/)
-                                    .map((word) => word[0])
-                                    .join("")
-                                    .slice(0, 3)}
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  <AnimatePresence>
                     {activeSlug === p.slug && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="overflow-hidden hidden lg:block"
+                        className="overflow-hidden"
                       >
                         <div className="pt-8 md:pl-[4.5rem]">
                           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -181,7 +121,7 @@ function ProjectPreview({ project }: { project: Project }) {
     .slice(0, 3);
 
   return (
-    <aside className="sticky top-28 z-20 hidden h-[42rem] lg:col-span-4 lg:block">
+    <aside className="relative z-20 h-[24rem] mb-12 block lg:sticky lg:top-28 lg:mb-0 lg:h-[42rem] lg:col-span-4">
       <motion.div
         key={project.slug}
         initial={{ opacity: 0, y: 18, scale: 0.98 }}
@@ -200,7 +140,7 @@ function ProjectPreview({ project }: { project: Project }) {
           strength={0.2}
           className="absolute inset-0 z-10 pointer-events-auto cursor-pointer"
         >
-          <div className="flex h-full w-full items-center justify-center translate-x-12 pointer-events-none">
+          <div className="flex h-full w-full items-center justify-center lg:translate-x-12 pointer-events-none">
             <motion.div
               animate={{
                 rotate: [0, 360],
@@ -214,7 +154,7 @@ function ProjectPreview({ project }: { project: Project }) {
                 ],
               }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-              className="relative flex aspect-square w-[500px] max-w-[150%] items-center justify-center overflow-hidden border border-hair bg-paper/70 shadow-2xl"
+              className="relative flex aspect-square w-[320px] max-w-[90vw] lg:w-[500px] lg:max-w-[150%] items-center justify-center overflow-hidden border border-hair bg-paper/70 shadow-2xl"
             >
               <motion.div
                 animate={{ rotate: [360, 0] }}
