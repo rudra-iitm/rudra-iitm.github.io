@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="grain relative flex min-h-[100svh] items-center overflow-hidden pt-20 md:pt-24"
+      className="grain relative flex flex-col md:flex-row min-h-[100svh] items-center justify-center overflow-hidden pt-20 md:pt-24"
     >
       <HeroOrb />
 
@@ -40,51 +40,7 @@ export function Hero() {
         BELOW
       </motion.div>
 
-      <motion.div
-        animate={{ y: [0, -15, 0] }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        className="relative mx-auto mt-12 block w-[280px] max-w-[80vw] pointer-events-auto md:absolute md:right-[8vw] md:top-[20svh] md:mt-0 md:w-[480px] md:max-w-[45vw] z-10"
-      >
-        <Magnetic strength={0.15} className="relative block cursor-pointer group">
-          <motion.div
-            animate={{
-              rotate: [0, 360],
-              borderRadius: [
-                "60% 40% 50% 50% / 40% 50% 50% 60%",
-                "40% 60% 70% 30% / 50% 40% 60% 50%",
-                "70% 30% 40% 60% / 60% 70% 30% 40%",
-                "30% 70% 60% 40% / 40% 30% 70% 60%",
-                "50% 50% 30% 70% / 70% 60% 40% 30%",
-                "60% 40% 50% 50% / 40% 50% 50% 60%",
-              ],
-            }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-            className="absolute top-[25%] left-[5%] w-[90%] aspect-square bg-foreground/[0.03] transition-transform duration-700 group-hover:scale-[1.10] -z-10 blur-xl"
-          />
-          <motion.div
-            animate={{
-              rotate: [360, 0],
-              borderRadius: [
-                "40% 60% 30% 70% / 60% 30% 70% 40%",
-                "50% 50% 60% 40% / 40% 60% 40% 60%",
-                "30% 70% 40% 60% / 70% 40% 60% 30%",
-                "60% 40% 70% 30% / 30% 70% 30% 70%",
-                "40% 60% 50% 50% / 50% 50% 50% 50%",
-                "40% 60% 30% 70% / 60% 30% 70% 40%",
-              ],
-            }}
-            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-            className="absolute top-[25%] left-[5%] w-[90%] aspect-square bg-foreground/[0.05] transition-transform duration-700 group-hover:scale-95 -z-10"
-          />
-          <img
-            src="/profile_real_nobg2.png"
-            alt="Rudra Pratap Singh"
-            className="relative z-10 w-full h-auto object-contain drop-shadow-xl transition-all duration-700 group-hover:scale-105"
-          />
-        </Magnetic>
-      </motion.div>
-
-      <div className="relative z-30 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-6 pb-20 md:flex-row md:items-start md:px-10 md:pb-0">
+      <div className="relative z-30 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-6 pb-12 md:flex-row md:items-start md:px-10 md:pb-0">
         <motion.div
           style={reduced ? undefined : { y, opacity }}
           className="w-full pointer-events-none mt-10 md:mt-0"
@@ -145,6 +101,50 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        animate={{ y: [0, -15, 0] }}
+        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+        className="relative mx-auto mb-16 block w-[280px] max-w-[80vw] pointer-events-auto md:absolute md:right-[8vw] md:top-[20svh] md:mb-0 md:mt-0 md:w-[480px] md:max-w-[45vw] z-10"
+      >
+        <Magnetic strength={0.15} className="relative block cursor-pointer group">
+          <motion.div
+            animate={{
+              rotate: [0, 360],
+              borderRadius: [
+                "60% 40% 50% 50% / 40% 50% 50% 60%",
+                "40% 60% 70% 30% / 50% 40% 60% 50%",
+                "70% 30% 40% 60% / 60% 70% 30% 40%",
+                "30% 70% 60% 40% / 40% 30% 70% 60%",
+                "50% 50% 30% 70% / 70% 60% 40% 30%",
+                "60% 40% 50% 50% / 40% 50% 50% 60%",
+              ],
+            }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            className="absolute top-[25%] left-[5%] w-[90%] aspect-square bg-foreground/[0.03] transition-transform duration-700 group-hover:scale-[1.10] -z-10 blur-xl"
+          />
+          <motion.div
+            animate={{
+              rotate: [360, 0],
+              borderRadius: [
+                "40% 60% 30% 70% / 60% 30% 70% 40%",
+                "50% 50% 60% 40% / 40% 60% 40% 60%",
+                "30% 70% 40% 60% / 70% 40% 60% 30%",
+                "60% 40% 70% 30% / 30% 70% 30% 70%",
+                "40% 60% 50% 50% / 50% 50% 50% 50%",
+                "40% 60% 30% 70% / 60% 30% 70% 40%",
+              ],
+            }}
+            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+            className="absolute top-[25%] left-[5%] w-[90%] aspect-square bg-foreground/[0.05] transition-transform duration-700 group-hover:scale-95 -z-10"
+          />
+          <img
+            src="/profile_real_nobg2.png"
+            alt="Rudra Pratap Singh"
+            className="relative z-10 w-full h-auto object-contain drop-shadow-xl transition-all duration-700 group-hover:scale-105"
+          />
+        </Magnetic>
+      </motion.div>
     </section>
   );
 }
