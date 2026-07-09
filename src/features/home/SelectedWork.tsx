@@ -92,15 +92,38 @@ export function SelectedWork() {
                               <p className="mt-2 text-lg">{p.stack.slice(0, 3).join(" · ")}</p>
                             </div>
                           </div>
-                          {p.image && (
-                            <div className="mt-10 block lg:hidden">
-                              <img
-                                src={p.image}
-                                alt={`${p.title} preview`}
-                                className="w-full h-auto aspect-video object-cover rounded-lg border border-hair shadow-xl bg-paper"
-                              />
+                          <div className="mt-10 block lg:hidden w-full overflow-hidden rounded-lg border border-hair shadow-xl bg-paper">
+                            <div className="relative aspect-video w-full flex items-center justify-center overflow-hidden">
+                              {p.href ? (
+                                <div className="pointer-events-none relative h-full w-full">
+                                  <div
+                                    className="absolute left-1/2 top-1/2 w-[1000px] h-[562px]"
+                                    style={{ transform: "translate(-50%, -50%) scale(0.35)" }}
+                                  >
+                                    <iframe
+                                      src={p.href}
+                                      className="w-full h-full border-none pointer-events-none bg-background"
+                                      title={`${p.title} preview`}
+                                    />
+                                  </div>
+                                </div>
+                              ) : p.image ? (
+                                <img
+                                  src={p.image}
+                                  alt={`${p.title} preview`}
+                                  className="absolute inset-0 h-full w-full object-cover"
+                                />
+                              ) : (
+                                <p className="font-display text-4xl text-foreground/90">
+                                  {p.title
+                                    .split(/[\s-]+/)
+                                    .map((word) => word[0])
+                                    .join("")
+                                    .slice(0, 3)}
+                                </p>
+                              )}
                             </div>
-                          )}
+                          </div>
                         </div>
                       </motion.div>
                     )}
